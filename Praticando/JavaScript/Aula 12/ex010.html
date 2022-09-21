@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Poder de voto</title>
+    <style>
+        body{
+            background-color: gray;
+            color: white;
+            font: normal 12pt Arial;
+        }
+        input{
+            font: normal 12pt Arial;
+            background: wheat;
+            border-color: blueviolet;
+            border-radius: 8px;
+            width: 90px;
+            height: 25px;
+        }
+        input#botao{
+            background: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificar poder de voto!!</h1>
+    <input type="number" name="idade" id="idade">
+    <input type="button" value="Verificar" id="botao" onclick="verifica()">
+    <div id="res"></div>
+
+    <script>
+        function verifica(){
+            var res = window.document.querySelector("div#res")
+            var idade = window.document.getElementById("idade")
+            idade = Number(idade.value)
+            res.innerHTML = `<p>Você tem ${idade} anos!!`
+            if (idade < 16){
+                res.innerHTML += '<p>Ainda não pode votar</p>'
+            }else if (idade < 18 || idade > 65){
+                res.innerHTML += '<p>O voto é opcional</p>'
+            }else{
+                res.innerHTML += '<p>O voto é obrigatório</p>'
+            }
+        }
+    </script>
+</body>
+</html>

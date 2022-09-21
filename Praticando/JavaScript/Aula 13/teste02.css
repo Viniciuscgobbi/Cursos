@@ -1,0 +1,17 @@
+body{
+    background: #373737;
+    font: normal 12pt Arial;
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 5px 5px 10px #eb1212;
+}

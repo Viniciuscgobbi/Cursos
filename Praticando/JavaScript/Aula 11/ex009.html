@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Passaporte</title>
+    <style>
+        body{
+            background: #373737;
+            color: white;
+            font: normal 12pt Arial;
+        }
+        input#txtpais{
+            width: 90px;
+            height: 20px;
+            border-radius: 7px;
+            background: wheat;
+            color: black;
+            font: normal 10pt Arial;
+        }
+        input#botao{
+            width: 90px;
+            height: 25px;
+            border-radius: 7px;
+            background: brown;
+            color: white;
+            font: normal 10pt Arial;
+            border-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de nacionalidade:</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" id="botao" onclick="verifica()">
+    <div id="res"></div>
+    
+    <script>
+        
+        function verifica(){
+            var Pnm = window.document.querySelector('input#txtpais')
+            var pais = String(Pnm.value).toLowerCase() //retorna a string "brasil"
+            var res = window.document.getElementById('res')
+            if (pais == 'brasil'){
+                res.innerHTML = `<p>Você é <strong>Brasileiro</strong></P`
+            }else{
+                res.innerHTML = '<p>Você é <strong>estrangeiro</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
